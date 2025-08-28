@@ -37,7 +37,6 @@ To get a local copy up and running, follow these simple steps.
 
 #### Prerequisites
 
-* A web browser
 * A **Google Gemini API Key** (you can get one from the [Google AI Studio](https://aistudio.google.com/app/apikey))
 
 #### Setup
