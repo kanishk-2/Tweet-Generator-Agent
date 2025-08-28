@@ -84,4 +84,4 @@ Contributions are what make the open-source community an incredible place to lea
 
 ### 📄 License
 
-This project is licensed under the UniLicense - see the `LICENSE.md` file for details.
+This project is licensed under the Unlicense - see the `LICENSE.md` file for details.
