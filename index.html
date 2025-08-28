@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Tweet Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="container max-w-2xl w-full p-8 space-y-8">
+        <!-- Header Section -->
+        <div>
+            <h1 class="text-3xl font-bold text-center text-gray-800">Tweet Generator</h1>
+            <p class="text-center text-gray-500 mt-2">Generate engaging tweets with the power of Gemini.</p>
+        </div>
+
+        <!-- Input Form Section -->
+        <div class="space-y-6">
+            <div>
+                <label for="topic" class="block text-sm font-medium text-gray-700 mb-1">Topic</label>
+                <input type="text" id="topic" name="topic" placeholder="e.g., The future of AI in education" class="block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out input-field">
+            </div>
+            
+            <div>
+                <label for="tone" class="block text-sm font-medium text-gray-700 mb-1">Tone</label>
+                <select id="tone" name="tone" class="block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out input-field">
+                    <option>Professional</option>
+                    <option>Casual</option>
+                    <option>Witty</option>
+                    <option>Motivational</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="audience" class="block text-sm font-medium text-gray-700 mb-1">Audience</label>
+                <input type="text" id="audience" name="audience" placeholder="e.g., students, educators, tech enthusiasts" class="block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out input-field">
+            </div>
+            
+            <div>
+                <label for="hashtags" class="block text-sm font-medium text-gray-700 mb-1">Hashtags</label>
+                <div class="flex space-x-2">
+                    <input type="text" id="hashtags" name="hashtags" placeholder="#AI #EdTech" class="flex-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out input-field">
+                    <button id="generate-hashtags-button" class="flex-shrink-0 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out flex items-center justify-center space-x-2">
+                        <span id="hashtags-button-text">Generate</span>
+                        <div id="hashtags-spinner" class="hidden loading-spinner">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <button id="generate-button" class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out flex items-center justify-center space-x-2">
+                <span id="generate-button-text">Generate Tweet</span>
+                <div id="generate-spinner" class="hidden loading-spinner">
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Output Section -->
+        <div id="output-container" class="mt-8 space-y-4 hidden">
+            <h2 class="text-xl font-bold text-gray-800">Generated Tweet</h2>
+            <div id="tweet-output" class="p-4 bg-gray-50 border rounded-md text-gray-700 whitespace-pre-wrap input-field"></div>
+            <div class="flex space-x-4">
+                <button id="summarize-button" class="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-150 ease-in-out flex items-center justify-center space-x-2">
+                    <span id="summarize-button-text">Summarize</span>
+                    <div id="summarize-spinner" class="hidden loading-spinner loading-spinner-dark">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+                <button id="expand-button" class="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-150 ease-in-out flex items-center justify-center space-x-2">
+                    <span id="expand-button-text">Expand</span>
+                    <div id="expand-spinner" class="hidden loading-spinner loading-spinner-dark">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+                <button id="clear-button" class="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-150 ease-in-out">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
