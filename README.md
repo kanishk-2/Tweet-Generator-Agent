@@ -81,6 +81,17 @@ Contributions are what make the open-source community an incredible place to lea
 5.  Open a Pull Request.
 
 ---
+### Outputs-
+
+## output-1:
+
+<img width="1095" height="619" alt="output-1" src="https://github.com/user-attachments/assets/652bbdc8-a37c-42e2-b7f3-cba180d67c42" />
+
+## output-2:
+
+<img width="935" height="766" alt="output-2" src="https://github.com/user-attachments/assets/87889280-67d1-48ee-a14c-910dda0510de" />
+
+---
 
 ### 📄 License
 
